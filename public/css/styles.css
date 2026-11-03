@@ -747,6 +747,24 @@ img {
 }
 
 @media (max-width: 768px) {
+  .nav-links li:not(:last-child) {
+    display: none;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+  .lead{
+    max-width: none;
+  }
+  .hero-actions{
+    justify-content: center;
+  }
+
   h1 {
     font-size: 40px;
   }
