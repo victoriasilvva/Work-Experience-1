@@ -764,7 +764,9 @@ img {
   .hero-actions{
     justify-content: center;
   }
-
+.hero-media{
+  max-width: 420px;
+}
   h1 {
     font-size: 40px;
   }
