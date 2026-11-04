@@ -747,6 +747,26 @@ img {
 }
 
 @media (max-width: 768px) {
+  .nav-links li:not(:last-child) {
+    display: none;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+  .lead{
+    max-width: none;
+  }
+  .hero-actions{
+    justify-content: center;
+  }
+.hero-media{
+  max-width: 420px;
+}
   h1 {
     font-size: 40px;
   }
@@ -772,7 +792,15 @@ img {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
+.section--sand .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.playbook-grid{
+  grid-template-columns: none;
+}
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 40px;
