@@ -658,6 +658,10 @@ img {
   resize: vertical;
 }
 
+#honeypot-field {
+  display: none !important;
+}
+
 .form-status {
   margin-top: 16px;
   font-weight: 700;

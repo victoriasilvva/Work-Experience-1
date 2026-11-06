@@ -1,8 +1,27 @@
+const pageLoadTime = Date.now()
 const form = document.getElementById('contact-form');
 const statusEl = document.getElementById('form-status');
 
+
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
+
+  if (document.getElementById('honeypot-field').value !== "") {
+    form.reset();
+    statusEl.textContent = "Thanks, we'll be in touch within one business day.";
+    statusEl.classList.add('form-status--success');
+    return
+  };
+
+  const submitTime = Date.now();
+  const secondsElapsed = (submitTime - pageLoadTime) / 1000
+
+  if (secondsElapsed < 3) {
+    form.reset();
+    statusEl.textContent = "Thanks, we'll be in touch within one business day.";
+    statusEl.classList.add('form-status--success');
+    return
+  }
 
   const button = form.querySelector('button[type="submit"]');
   button.disabled = true;
