@@ -796,8 +796,9 @@ img {
     flex-direction: column;
   }
 
-  .nav-links {
-    flex-direction: column;
+  .site-header--home .nav-links {
+    flex-wrap: wrap;
+    gap: 0px;
   }
 
   .nav-links li {
@@ -809,7 +810,12 @@ img {
   }
 
   .hero-inner {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  .hero-media {
+    width: 100%;
+    max-width: 600px;
   }
 
   .hero-text {
@@ -834,7 +840,8 @@ img {
   }
 
   .hero-media {
-    max-width: 420px;
+    width: 100%;
+    max-width: 500px;
   }
 
   h1 {
